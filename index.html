@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>getclients.site — клиенты из интернета</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- 🔥 УТП -->
+    <header>
+      <h1>getclients.site</h1>
+      <p>— ваш генератор клиентов из интернета</p>
+      <a href="#services" class="btn">Мои услуги</a>
+    </header>
+
+    <!-- 🛠 Услуги -->
+    <section id="services">
+      <h2>Услуги</h2>
+      <ul class="services">
+        <li>⚙️ Разработка сайтов и лендингов под ключ</li>
+        <li>🔍 Аудит и SEO-оптимизация</li>
+        <li>📢 Контекстная реклама: Яндекс и Google</li>
+        <li>📈 Продвижение: SMM, таргетинг, контент</li>
+        <li>🛍 Маркетплейсы: карточки товаров, SEO-тексты</li>
+      </ul>
+    </section>
+
+    <!-- 💬 Отзывы -->
+    <section id="reviews">
+      <h2>Отзывы</h2>
+      <ul class="services">
+        <li>«Получили сайт быстрее срока, и уже с первых недель пошли заявки!» — ИП Куликов</li>
+        <li>«Антон помог не только с сайтом, но и с текстами для карточек на Wildberries. Результат — рост продаж на 48%.» — студия STone</li>
+      </ul>
+    </section>
+
+    <!-- 📩 Контакты -->
+    <section id="contact">
+      <h2>Связаться со мной</h2>
+ <!--<button class="btn" onclick="document.querySelector('.contact-form').classList.remove('hidden'); document.querySelector('.contact-form').style.display='flex';">
+        Показать форму вручную
+      </button>
+
+      
+<form id="contact-form">
+  <input type="text" id="name" placeholder="Ваше имя" required />
+  <input type="email" id="email" placeholder="Email" required />
+  <textarea id="message" placeholder="Сообщение" required></textarea>
+  <button type="submit">Отправить</button>
+</form>-->
+
+
+
+
+      <div id="thankYou" class="thank-you hidden">
+        <h2>Спасибо за сообщение! 🙌</h2>
+        <p>Я свяжусь с вами в ближайшее время. А пока можете ознакомиться с кейсами или подписаться на <a href="https://t.me/spartanecOfTony">Telegram</a>.</p>
+        <a href="#services" class="btn">Назад к услугам</a>
+      </div>
+
+     
+
+      <a href="#" onclick="showFormAgain()" id="sendAnother" class="btn" style="display: none;">Отправить ещё одно сообщение</a>
+
+    </section>
+
+    <!-- 🧾 Подвал -->
+    <footer>
+      <p>© getclients.site, 2025 — создано Антоном</p>
+    </footer>
+  </div>
+
+  <!-- JS-библиотеки -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+<script>
+  document.getElementById("contact-form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const data = {
+    name: this.name.value,
+    email: this.email.value,
+    message: this.message.value
+  };
+
+  await fetch('https://getclients-site.vercel.app/api/telegram', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+
+  alert('Данные отправлены!');
+});
+</script>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+{
+  "name": "getclients.site",
+  "version": "1.0.0",
+  "description": "сайт для привлечения на мою страницу",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anton-khokhlenkov/getclients.site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anton-khokhlenkov/getclients.site/issues"
+  },
+  "homepage": "https://github.com/anton-khokhlenkov/getclients.site#readme",
+  "dependencies": {
+    "axios": "^1.11.0"
+  }
+}
